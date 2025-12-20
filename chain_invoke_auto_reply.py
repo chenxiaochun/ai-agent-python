@@ -21,8 +21,16 @@ prompt_template = ChatPromptTemplate(
     ]
 )
 
-parser = StrOutputParser()
-chain = prompt_template | model | parser
+analysis_prompt_template = ChatPromptTemplate(
+    [("user", "我该怎么回答这句话？{talk}，请给我一个五个字的示例")]
+)
 
-resp = chain.invoke({"text": "你好", "language": "韩文"})
+parser = StrOutputParser()
+
+chain = prompt_template | model | parser
+chain.invoke({"text": "见你很高兴", "language": "英文"})
+
+chain2 = {"talk": chain} | analysis_prompt_template | model | parser
+resp = chain2.invoke({"text": "你是谁", "language": "英文"})
+
 print(resp)
