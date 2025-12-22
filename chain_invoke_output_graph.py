@@ -1,6 +1,5 @@
 from get_model import get_model
 from langchain_core.output_parsers import StrOutputParser
-from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import (
     RunnableMap,
@@ -8,7 +7,6 @@ from langchain_core.runnables import (
     RunnableWithMessageHistory,
 )
 
-load_dotenv()
 
 model = get_model()
 
@@ -28,6 +26,7 @@ prompt_template_fr = ChatPromptTemplate.from_messages(
 
 parser = StrOutputParser()
 
+# 只要是 Runnable 子类，就可以串成一个序列
 chain_zh = prompt_template_zh | model | parser
 chain_fr = prompt_template_fr | model | parser
 
