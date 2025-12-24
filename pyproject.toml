@@ -10,7 +10,9 @@ dependencies = [
     "langchain>=1.2.0",
     "langchain-mcp-adapters>=0.2.1",
     "langchain-openai>=1.1.4",
+    "langchain-redis>=0.2.5",
     "langgraph>=1.0.5",
     "openai>=2.13.0",
     "python-dotenv>=1.0.0",
+    "redis>=7.1.0",
 ]
