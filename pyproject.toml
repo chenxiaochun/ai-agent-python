@@ -5,9 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "dashscope>=1.25.5",
     "dotenv>=0.9.9",
     "grandalf>=0.8",
     "langchain>=1.2.0",
+    "langchain-community>=0.4.1",
     "langchain-mcp-adapters>=0.2.1",
     "langchain-openai>=1.1.4",
     "langchain-redis>=0.2.5",

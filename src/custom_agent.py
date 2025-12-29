@@ -10,6 +10,7 @@ model = get_model()
 
 @tool(description="获取某个城市的天气")
 def get_weather(city: str):
+
     return "{city}的天气很好"
 
 
