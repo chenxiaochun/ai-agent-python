@@ -7,7 +7,7 @@ load_dotenv()
 
 def get_embedding_model():
     embedding_model = DashScopeEmbeddings(
-        dashscope_api_key=os.getenv("sk-65fdf4deca47406ba50849e2c2efe909"),
+        dashscope_api_key=os.getenv("DASHSCOPE_API_KEY"),
         model="text-embedding-v4",
     )
     return embedding_model
