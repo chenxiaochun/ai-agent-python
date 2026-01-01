@@ -4,6 +4,7 @@ __pycache__/
 build/
 dist/
 wheels/
+docs/
 *.egg-info
 
 # Virtual environments
@@ -19,3 +20,4 @@ wheels/
 # Credentials
 credentials.json
 secrets.json
+
