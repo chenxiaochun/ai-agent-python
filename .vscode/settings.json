@@ -1,6 +1,24 @@
 {
-   "[python]": {
-       "editor.formatOnSave": true,
-       "editor.defaultFormatter": "ms-python.black-formatter"
-   }
+    // 全局设置：保存时自动格式化
+    "editor.formatOnSave": true,
+    // Python 文件配置
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        // 保存时自动执行的操作
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    // Black 格式化器配置
+    "black-formatter.args": [
+        "--line-length=100"
+    ],
+    // isort 配置（用于自动整理导入）
+    "isort.args": [
+        "--profile=black",
+        "--line-length=100"
+    ],
+    // 禁用 Python 扩展的默认格式化器，使用 Black
+    "python.formatting.provider": "none"
 }
