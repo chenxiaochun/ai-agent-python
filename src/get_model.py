@@ -9,7 +9,7 @@ load_dotenv()
 def get_model():
     model = ChatOpenAI(
         model_name="qwen3-max",
-        api_key=os.getenv("DASHSCOPE_API_KEY"),
+        api_key=os.getenv("OPENAI_API_KEY"),
         openai_api_base="https://dashscope.aliyuncs.com/compatible-mode/v1",
         # streaming=True,
     )

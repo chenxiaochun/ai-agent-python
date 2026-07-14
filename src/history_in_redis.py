@@ -3,9 +3,7 @@ from langchain_redis import RedisChatMessageHistory
 
 model = get_model()
 
-history = RedisChatMessageHistory(
-    session_id="test", redis_url="redis://localhost:6379/0"
-)
+history = RedisChatMessageHistory(session_id="test", redis_url="redis://localhost:6379/0")
 
 history.add_user_message("你是谁？")
 ai_message = model.invoke(history.messages)
