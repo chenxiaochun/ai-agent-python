@@ -11,6 +11,5 @@ def get_model():
         model_name="qwen3-max",
         api_key=os.getenv("OPENAI_API_KEY"),
         openai_api_base="https://dashscope.aliyuncs.com/compatible-mode/v1",
-        # streaming=True,
     )
     return model
