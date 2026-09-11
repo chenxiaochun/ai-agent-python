@@ -1,5 +1,4 @@
 # 长期记忆，语义搜索
-from langgraph.store.base import embed
 from langgraph.store.memory import InMemoryStore
 from get_embedding_model import get_embedding_model
 from get_model import get_model
